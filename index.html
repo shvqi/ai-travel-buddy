@@ -1,196 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Travel Buddy - Korea</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Travel Buddy - Korea</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #fff3f8;
+    color: #333;
+  }
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  a { text-decoration: none; }
 
-  <style>
-    :root {
-      --primary: #9c27b0;
-      --bg: linear-gradient(135deg, #f7f1e3, #d1c4e9);
-      --text: #333;
-      --card-bg: rgba(255, 255, 255, 0.95);
-      --shadow: 0 8px 30px rgba(0,0,0,0.1);
-      --radius: 16px;
-    }
+  /* Hero */
+  .hero {
+    position: relative;
+    background: url('https://cdn.pixabay.com/photo/2018/01/26/17/09/seoul-3101071_1280.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+  }
+  .hero h1, .hero p, .hero .btn {
+    position: relative;
+    z-index: 1;
+  }
+  .hero h1 { font-size: 48px; margin-bottom: 10px; }
+  .hero p { font-size: 20px; margin-bottom: 25px; max-width: 600px; }
 
-    * { box-sizing: border-box; }
+  .btn {
+    padding: 14px 30px;
+    margin: 5px;
+    font-weight: 700;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #9c27b0, #f06292);
+    color: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(156,39,176,0.4);
+  }
 
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
+  /* Features Section */
+  .section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+  }
+  .section h2 { font-size: 32px; margin-bottom: 40px; }
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+  .feature-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    padding: 25px;
+    width: 220px;
+    transition: transform 0.2s;
+  }
+  .feature-card:hover { transform: translateY(-8px); }
+  .feature-card h3 { color: #9c27b0; margin-bottom: 10px; }
+  .feature-card p { color: #555; font-size: 14px; }
 
-    a { text-decoration: none; }
+  /* Sample Cities Section */
+  .cities {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+  .city-card {
+    flex: 0 0 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    background: #fff;
+    transition: transform 0.2s;
+  }
+  .city-card:hover { transform: translateY(-5px); }
+  .city-card img { width: 100%; height: 150px; object-fit: cover; }
+  .city-card h4 { margin: 10px; color: #9c27b0; }
+  .city-card p { margin: 0 10px 10px 10px; font-size: 14px; color: #555; }
 
-    .hero {
-      background: url('https://cdn.pixabay.com/photo/2018/01/26/17/09/seoul-3101071_1280.jpg') center/cover no-repeat;
-      color: white;
-      padding: 80px 20px;
-      text-align: center;
-      position: relative;
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.35);
-    }
-
-    .hero h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 25px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      font-weight: bold;
-      border-radius: 8px;
-      background: var(--primary);
-      color: white;
-      margin: 5px;
-      transition: transform 0.2s;
-    }
-
-    .btn:hover { transform: scale(1.05); }
-
-    .section {
-      padding: 50px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .section h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-
-    .feature-card {
-      background: var(--card-bg);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 20px;
-      text-align: center;
-      transition: transform 0.2s;
-    }
-
-    .feature-card:hover { transform: translateY(-5px); }
-
-    .feature-card h3 { margin-bottom: 10px; color: var(--primary); }
-
-    .feature-card p { font-size: 14px; color: #555; }
-
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-    }
-
-    /* Center the Botpress container */
-    #bp-web-widget-container {
-      position: fixed !important;
-      top: 50% !important;
-      left: 50% !important;
-      transform: translate(-50%, -50%) !important;
-      z-index: 999999 !important;
-      background: rgba(0,0,0,.6) !important;
-      backdrop-filter: blur(6px) !important;
-      border-radius: 20px !important;
-      padding: 0 !important;
-    }
-
-    #bp-web-widget-container iframe {
-      width: 700px !important;
-      height: 700px !important;
-      max-width: 90vw !important;
-      max-height: 90vh !important;
-      border-radius: 16px !important;
-      box-shadow: 0 40px 120px rgba(0,0,0,.7) !important;
-      border: 1px solid rgba(255,255,255,.1) !important;
-    }
-
-    body.modal-open { overflow: hidden !important; }
-
-  </style>
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #f06292;
+    color: white;
+  }
+</style>
 </head>
 <body>
 
-  <!-- Hero Section -->
-  <div class="hero">
-    <h1>Explore Korea with AI Travel Buddy 🇰🇷</h1>
-    <p>Plan your Korean trip with personalised itineraries, budgets, food, and cultural tips!</p>
-    <a href="#features" class="btn">See Features</a>
-    <a href="#chat" class="btn">Chat with AI</a>
-  </div>
+<!-- Hero -->
+<div class="hero">
+  <h1>Discover Korea with AI Travel Buddy 🇰🇷</h1>
+  <p>Plan personalized trips to Seoul, Busan, Jeju, and more with student-friendly itineraries, budget tips, and local guides.</p>
+  <a href="#features" class="btn">See Features</a>
+  <a href="#cities" class="btn">Explore Cities</a>
+</div>
 
-  <!-- Features / Highlights Section -->
-  <div class="section" id="features">
-    <h2>What AI Travel Buddy Can Do</h2>
-    <div class="features">
-      <div class="feature-card">
-        <h3>🍜 Food Guide</h3>
-        <p>Discover the best Korean dishes, street food, and local restaurants.</p>
-      </div>
-      <div class="feature-card">
-        <h3>🏛️ Cultural Spots</h3>
-        <p>Get curated recommendations for museums, temples, and landmarks.</p>
-      </div>
-      <div class="feature-card">
-        <h3>💰 Budget Planner</h3>
-        <p>Plan your trip expenses efficiently in SGD for students.</p>
-      </div>
-      <div class="feature-card">
-        <h3>🛡️ Safety Tips</h3>
-        <p>Stay safe with travel tips and health guidance in Korea.</p>
-      </div>
-      <div class="feature-card">
-        <h3>🛍️ Shopping</h3>
-        <p>Find the best shopping streets, local markets, and souvenirs.</p>
-      </div>
+<!-- Features -->
+<div class="section" id="features">
+  <h2>Features</h2>
+  <div class="features">
+    <div class="feature-card">
+      <h3>🍜 Food Guide</h3>
+      <p>Discover the best Korean dishes, street food, and local restaurants.</p>
+    </div>
+    <div class="feature-card">
+      <h3>🏛️ Culture & History</h3>
+      <p>Get curated recommendations for palaces, museums, and cultural spots.</p>
+    </div>
+    <div class="feature-card">
+      <h3>💰 Budget Planner</h3>
+      <p>Plan your trip expenses efficiently for a student-friendly budget.</p>
+    </div>
+    <div class="feature-card">
+      <h3>🛍️ Shopping</h3>
+      <p>Find the best shopping streets, local markets, and souvenirs.</p>
     </div>
   </div>
+</div>
 
-  <!-- Footer -->
-  <footer>
-    © 2026 AI Travel Buddy • RP C240 Prototype
-  </footer>
+<!-- Sample Cities -->
+<div class="section" id="cities">
+  <h2>Sample Cities</h2>
+  <div class="cities">
+    <div class="city-card">
+      <img src="https://cdn.pixabay.com/photo/2017/01/20/00/30/seoul-1997855_1280.jpg" alt="Seoul">
+      <h4>Seoul</h4>
+      <p>Vibrant city with food, shopping, and historical sites.</p>
+    </div>
+    <div class="city-card">
+      <img src="https://cdn.pixabay.com/photo/2017/04/17/21/39/busan-2238357_1280.jpg" alt="Busan">
+      <h4>Busan</h4>
+      <p>Coastal city with beaches, seafood, and cultural attractions.</p>
+    </div>
+    <div class="city-card">
+      <img src="https://cdn.pixabay.com/photo/2016/06/01/19/49/jeju-1420767_1280.jpg" alt="Jeju">
+      <h4>Jeju</h4>
+      <p>Island paradise with nature, hiking, and scenic views.</p>
+    </div>
+  </div>
+</div>
 
-  <!-- Botpress Chatbot -->
-  <script src="https://cdn.botpress.cloud/webchat/v3.5/inject.js"></script>
-  <script>
-    window.botpressWebChat.init({
-      configUrl: "https://files.bpcontent.cloud/2026/01/06/05/20260106051545-8ZP1UCU1.json",
-      position: "bottom-right"
-    });
-  </script>
+<footer>
+  © 2026 AI Travel Buddy • RP C240 Prototype
+</footer>
+
+<!-- Botpress Chatbot -->
+<script src="https://cdn.botpress.cloud/webchat/v3.5/inject.js"></script>
+<script>
+  window.botpressWebChat.init({
+    configUrl: "https://files.bpcontent.cloud/2026/01/06/05/20260106051545-8ZP1UCU1.json",
+    position: "bottom-right"
+  });
+</script>
 
 </body>
 </html>
