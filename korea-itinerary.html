@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>China Itineraries • AI Travel Buddy</title>
+  <title>Korea Itineraries • AI Travel Buddy</title>
 
   <style>
     :root{
@@ -93,14 +93,14 @@
       flex-direction: column;
     }
 
-    .card.chengdu{
-      background-image: url('https://content.r9cdn.net/rimg/dimg/a5/6f/7a9dfa5d-city-2124-17ea256c950.jpg?width=1366&height=768&xhint=1555&yhint=1003&crop=true');
+    /* Korea city cards with sample images */
+    .card.seoul{
+      background-image: url('https://images.unsplash.com/photo-1563986768609-b2e2f9b9d39d');
       background-size: cover;
       background-position: center;
       position: relative;
     }
-
-    .card.chengdu::before{
+    .card.seoul::before{
       content: '';
       position: absolute;
       inset: 0;
@@ -109,14 +109,13 @@
       z-index: 1;
     }
 
-    .card.beijing{
-      background-image: url('https://www.tripsavvy.com/thmb/Dfj0Yk97Af8VYlm-TWsGpLDm-H0=/5000x3338/filters:fill(auto,1)/forbidden-city-beijing-8775c18670bd412d9b54daecba137c5c.jpg');
+    .card.busan{
+      background-image: url('https://images.unsplash.com/photo-1590585154852-7d383fbd585b');
       background-size: cover;
       background-position: center;
       position: relative;
     }
-
-    .card.beijing::before{
+    .card.busan::before{
       content: '';
       position: absolute;
       inset: 0;
@@ -125,14 +124,13 @@
       z-index: 1;
     }
 
-    .card.shanghai{
-      background-image: url('https://imgcld.yatra.com/ytimages/image/upload/v1487225310/Shanghai_History.jpg');
+    .card.jeju{
+      background-image: url('https://images.unsplash.com/photo-1587094311533-c1b93638dc8c');
       background-size: cover;
       background-position: center;
       position: relative;
     }
-
-    .card.shanghai::before{
+    .card.jeju::before{
       content: '';
       position: absolute;
       inset: 0;
@@ -141,14 +139,13 @@
       z-index: 1;
     }
 
-    .card.xian{
-      background-image: url('https://cdn.sanity.io/images/f8lauh0h/production/d3f6ed30a039ff5c0247a2e1e762f2e12de99dea-2048x1449.jpg');
+    .card.gyeongju{
+      background-image: url('https://images.unsplash.com/photo-1592213803705-5418f44e17f7');
       background-size: cover;
       background-position: center;
       position: relative;
     }
-
-    .card.xian::before{
+    .card.gyeongju::before{
       content: '';
       position: absolute;
       inset: 0;
@@ -157,14 +154,13 @@
       z-index: 1;
     }
 
-    .card.yangshuo{
-      background-image: url('https://th.bing.com/th/id/R.2d456bf0118417ffdcbe6331c25d81ad?rik=XHbUsaS6KpUNdg&riu=http%3a%2f%2frakkup.com%2fwp-content%2fuploads%2f2018%2f02%2fYanghsuo-Rock-Climbing-Guidebook-13.jpg&ehk=mXSY7eMtCgiT4MGieZ5KtWdMfUkTWKpoC6LtIQXP0yw%3d&risl=&pid=ImgRaw&r=0');
+    .card.jeonju{
+      background-image: url('https://images.unsplash.com/photo-1574241574861-1e8c44a3c6d0');
       background-size: cover;
       background-position: center;
       position: relative;
     }
-
-    .card.yangshuo::before{
+    .card.jeonju::before{
       content: '';
       position: absolute;
       inset: 0;
@@ -173,11 +169,7 @@
       z-index: 1;
     }
 
-    .card.chengdu > *,
-    .card.beijing > *,
-    .card.shanghai > *,
-    .card.xian > *,
-    .card.yangshuo > *{
+    .card > *{
       position: relative;
       z-index: 2;
     }
@@ -229,90 +221,84 @@
     <a class="btn" href="index.html">← Back to Home</a>
   </div>
 
-  <h1>🇨🇳 China Itinerary Samples</h1>
+  <h1>🇰🇷 Korea Itinerary Samples</h1>
   <p class="muted">
     These sample itineraries show what AI Travel Buddy can generate for Republic Polytechnic students.
-    Use the chatbot at the bottom-right for personalised plans.
+    Use the chatbot at the bottom-right for personalised Korea plans.
   </p>
 
   <div class="grid">
 
-    <div class="card chengdu">
-      <div class="pill">🍜 Food • Relaxed</div>
-      <h2>Chengdu (5 Days)</h2>
-      <p class="muted">Best for students who love street food, hotpot, and tea houses.</p>
+    <div class="card seoul">
+      <div class="pill">🏙️ City • K-pop & Food</div>
+      <h2>Seoul (5 Days)</h2>
+      <p class="muted">Best for students who love city vibes, K-pop, and street food.</p>
       <details>
         <summary>View sample itinerary</summary>
         <ul>
-          <li><b>Day 1:</b> Arrival + Jinli Ancient Street food exploration</li>
-          <li><b>Day 2:</b> Panda Base + Sichuan hotpot + food street</li>
-          <li><b>Day 3:</b> Tea house experience + street food night</li>
-          <li><b>Day 4:</b> Shopping streets + café or tea house</li>
-          <li><b>Day 5:</b> Souvenir shopping + free exploration + departure</li>
+          <li><b>Day 1:</b> Arrival + Myeongdong street food</li>
+          <li><b>Day 2:</b> Gyeongbokgung + Bukchon Hanok Village</li>
+          <li><b>Day 3:</b> Hongdae & K-pop street performances</li>
+          <li><b>Day 4:</b> N Seoul Tower + Han River picnic</li>
+          <li><b>Day 5:</b> Free exploration + souvenir shopping + departure</li>
         </ul>
       </details>
     </div>
 
-    <div class="card beijing">
-      <div class="pill">🏛️ Culture • History</div>
-      <h2>Beijing (5 Days)</h2>
-      <p class="muted">Best for students interested in landmarks and history.</p>
+    <div class="card busan">
+      <div class="pill">🏖️ Beach • Relaxed</div>
+      <h2>Busan (4 Days)</h2>
+      <p class="muted">Best for students who enjoy beaches and seafood.</p>
       <details>
         <summary>View sample itinerary</summary>
         <ul>
-          <li><b>Day 1:</b> Arrival + local food street</li>
-          <li><b>Day 2:</b> Forbidden City + Tiananmen Square</li>
-          <li><b>Day 3:</b> Great Wall day trip</li>
-          <li><b>Day 4:</b> Summer Palace + neighbourhood walk</li>
-          <li><b>Day 5:</b> Souvenir shopping + departure</li>
+          <li><b>Day 1:</b> Arrival + Haeundae Beach walk</li>
+          <li><b>Day 2:</b> Gamcheon Culture Village + seafood street</li>
+          <li><b>Day 3:</b> Jagalchi Market + BIFF Square</li>
+          <li><b>Day 4:</b> Free exploration + departure</li>
         </ul>
       </details>
     </div>
 
-    <div class="card shanghai">
-      <div class="pill">🌆 Modern • Shopping</div>
-      <h2>Shanghai (5 Days)</h2>
-      <p class="muted">Best for students who enjoy city views and shopping.</p>
+    <div class="card jeju">
+      <div class="pill">🌋 Nature • Adventure</div>
+      <h2>Jeju Island (5 Days)</h2>
+      <p class="muted">Best for students seeking scenic landscapes and hiking.</p>
       <details>
         <summary>View sample itinerary</summary>
         <ul>
-          <li><b>Day 1:</b> Arrival + The Bund walk</li>
-          <li><b>Day 2:</b> Yu Garden + street snacks</li>
-          <li><b>Day 3:</b> City viewpoints + cafés</li>
-          <li><b>Day 4:</b> Nanjing Road shopping + markets</li>
+          <li><b>Day 1:</b> Arrival + Jeju City walk</li>
+          <li><b>Day 2:</b> Seongsan Ilchulbong sunrise + beach</li>
+          <li><b>Day 3:</b> Hallasan National Park hike</li>
+          <li><b>Day 4:</b> Manjanggul Cave + local cuisine</li>
           <li><b>Day 5:</b> Free exploration + departure</li>
         </ul>
       </details>
     </div>
 
-    <div class="card xian">
-      <div class="pill">🏯 History • Budget</div>
-      <h2>Xi'an (5 Days)</h2>
-      <p class="muted">Best for students seeking history and budget travel.</p>
+    <div class="card gyeongju">
+      <div class="pill">🏯 History • Culture</div>
+      <h2>Gyeongju (3 Days)</h2>
+      <p class="muted">Best for students interested in Korean history and culture.</p>
       <details>
         <summary>View sample itinerary</summary>
         <ul>
-          <li><b>Day 1:</b> Arrival + Muslim Quarter food street</li>
-          <li><b>Day 2:</b> Terracotta Warriors</li>
-          <li><b>Day 3:</b> Ancient City Wall + Bell & Drum Towers</li>
-          <li><b>Day 4:</b> Markets + street food</li>
-          <li><b>Day 5:</b> Souvenir shopping + departure</li>
+          <li><b>Day 1:</b> Arrival + Bulguksa Temple</li>
+          <li><b>Day 2:</b> Seokguram Grotto + Tumuli Park</li>
+          <li><b>Day 3:</b> Traditional market + departure</li>
         </ul>
       </details>
     </div>
 
-    <div class="card yangshuo">
-      <div class="pill">🌄 Nature • Photography</div>
-      <h2>Guilin / Yangshuo (5 Days)</h2>
-      <p class="muted">Best for students who enjoy scenery and relaxed travel.</p>
+    <div class="card jeonju">
+      <div class="pill">🍲 Food • Culture</div>
+      <h2>Jeonju (2 Days)</h2>
+      <p class="muted">Best for students who love traditional Korean food.</p>
       <details>
         <summary>View sample itinerary</summary>
         <ul>
-          <li><b>Day 1:</b> Arrival + city walk</li>
-          <li><b>Day 2:</b> Li River scenery</li>
-          <li><b>Day 3:</b> Countryside exploration</li>
-          <li><b>Day 4:</b> Photography + relaxation</li>
-          <li><b>Day 5:</b> Souvenir shopping + departure</li>
+          <li><b>Day 1:</b> Arrival + Jeonju Hanok Village + bibimbap tasting</li>
+          <li><b>Day 2:</b> Traditional markets + departure</li>
         </ul>
       </details>
     </div>
