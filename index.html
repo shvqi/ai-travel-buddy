@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Travel Buddy</title>
+  <title>AI Travel Buddy - Korea</title>
 
   <style>
     :root{
@@ -25,7 +25,7 @@
     body{
       margin:0;
       font-family: var(--font);
-      background-image: url('https://ik.imgkit.net/3vlqs5axxjf/BTNE/uploadedImages/2_Features/Management/shanghai%20china%20134080680_l.jpeg');
+      background-image: url('https://images.unsplash.com/photo-1549692520-acc6669e2f0c');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -114,7 +114,7 @@
       border-radius:12px;
       border:1px solid var(--border);
       background:rgba(255,255,255,.03);
-      color:var(--text);
+      color: var(--text);
       font-weight:600;
       display:inline-block;
       cursor:pointer;
@@ -160,10 +160,7 @@
       border:1px solid var(--border);
     }
 
-    .kpi b{
-      display:block;
-      margin-bottom:4px;
-    }
+    .kpi b{ display:block; margin-bottom:4px; }
 
     .muted{ color:var(--muted); }
 
@@ -177,113 +174,10 @@
     .span-7{ grid-column:span 7; }
     .span-5{ grid-column:span 5; }
 
-    .videoContainer{
-      grid-column: span 12;
-      border-radius: var(--radius);
-      overflow: hidden;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-    }
-
-    .videoContainer iframe{
-      width: 100%;
-      height: 600px;
-      display: block;
-    }
-
-    .mediaSection{
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-      margin-top: 16px;
-      grid-column: span 12;
-    }
-
-    .brochureContainer{
-      border-radius: var(--radius);
-      overflow: hidden;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-    }
-
-    .brochureContainer img{
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .videoWrapper{
-      border-radius: var(--radius);
-      overflow: hidden;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-    }
-
-    .videoWrapper iframe{
-      width: 100%;
-      height: 600px;
-      display: block;
-    }
-
     @media (max-width:880px){
       .hero{ grid-template-columns:1fr; }
       h1{ font-size:34px; }
       .span-7,.span-5{ grid-column:span 12; }
-      .mediaSection{ grid-template-columns: 1fr; }
-    }
-
-    /* =========================
-       Chat Modal (2nd pic style)
-       ========================= */
-    .chatModal{
-      position: fixed;
-      inset: 0;
-      display: none;                /* hidden by default */
-      align-items: center;
-      justify-content: center;
-      z-index: 999999;
-      padding: 18px;
-      background: rgba(0,0,0,.65);
-      backdrop-filter: blur(6px);
-    }
-
-    .chatModal.open{ display:flex; }
-
-    .chatPanel{
-      width: min(1100px, 96vw);
-      height: min(760px, 92vh);
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      box-shadow: 0 40px 120px rgba(0,0,0,.7);
-      background: var(--card);
-      position: relative;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .chatClose{
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      z-index: 2;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.06);
-      color: var(--text);
-      border-radius: 12px;
-      padding: 8px 10px;
-      cursor: pointer;
-      font-weight: 700;
-      line-height: 1;
-    }
-
-    .chatFrame{
-      width: 100%;
-      height: 100%;
-      border: 0;
-      display: block;
-      background: transparent;
-      flex: 1;
     }
   </style>
 </head>
@@ -293,31 +187,29 @@
 
   <div class="nav">
     <div class="brand">AI Travel Buddy ✈️</div>
-    <div class="badge">For RP Students • China Travel Planner</div>
+    <div class="badge">For RP Students • Korea Travel Planner</div>
   </div>
 
   <div class="hero">
     <div class="card">
-      <h1>Plan your China trip in minutes</h1>
+      <h1>Plan your Korea trip in minutes</h1>
       <p class="subtitle">
-        AI Travel Buddy helps Republic Polytechnic students generate personalised itineraries,
-        budgets in SGD, transport tips, and safety guidance.
+        AI Travel Buddy helps Republic Polytechnic students generate personalised Korea itineraries,
+        budgets in SGD, transport tips, food recommendations, and safety guidance.
       </p>
 
       <div class="ctaRow">
-        <!-- ✅ Opens centered big chat (like your 2nd pic) -->
         <button class="btn primary" id="openChatBtn" type="button">
           Chat with AI Travel Buddy
         </button>
-
         <a class="btn" href="#about">What is this?</a>
-        <a class="btn success" href="china-itinerary.html">🇨🇳 China Itineraries</a>
+        <a class="btn success" href="#">🇰🇷 Korea Itineraries</a>
       </div>
 
       <div class="chips">
-        <span class="chip">🍜 Food</span>
-        <span class="chip">🏛️ Culture</span>
-        <span class="chip">🌄 Nature</span>
+        <span class="chip">🍜 Korean Food</span>
+        <span class="chip">🎤 K-pop</span>
+        <span class="chip">🏯 Culture</span>
         <span class="chip">🛍️ Shopping</span>
         <span class="chip">💰 Budget</span>
         <span class="chip">🛡️ Safety</span>
@@ -330,15 +222,15 @@
 
       <div class="twoCol">
         <div class="kpi">
-          <b>Chengdu food trip</b>
-          <span class="muted">5 days, SGD 1,200</span>
+          <b>Seoul food trip</b>
+          <span class="muted">5 days, SGD 1,300</span>
         </div>
         <div class="kpi">
-          <b>Beijing culture</b>
-          <span class="muted">Student-friendly itinerary</span>
+          <b>K-pop & culture</b>
+          <span class="muted">Student itinerary</span>
         </div>
         <div class="kpi">
-          <b>Shanghai shopping</b>
+          <b>Busan beach trip</b>
           <span class="muted">Budget travel plan</span>
         </div>
         <div class="kpi">
@@ -354,33 +246,20 @@
       <h2>What is AI Travel Buddy?</h2>
       <p>
         AI Travel Buddy is an AI-powered travel assistant designed specifically
-        for Republic Polytechnic students planning trips to China.
+        for Republic Polytechnic students planning trips to Korea.
       </p>
       <p class="muted">
-        This prototype demonstrates retrieval-based responses, prompt design,
-        and AI tool integration for C240.
+        This prototype demonstrates prompt engineering, retrieval-augmented generation (RAG),
+        and Botpress chatbot integration for the C240 module.
       </p>
     </div>
 
-    <div class="card span-5" id="countries">
-      <h2>Supported Countries</h2>
+    <div class="card span-5">
+      <h2>Supported Destination</h2>
       <ul class="muted">
-        <li>🇨🇳 China</li>
-        <li>🇮🇩 Indonesia</li>
-        <li>🇹🇭 Thailand</li>
         <li>🇰🇷 Korea</li>
-        <li>🇵🇭 Philippines</li>
       </ul>
-      <p class="muted">(Chatbot optimised for China)</p>
-    </div>
-
-    <div class="mediaSection">
-      <div class="brochureContainer">
-        <img src="images/china-brochure.png" alt="China Travel Brochure">
-      </div>
-      <div class="videoWrapper">
-        <iframe width="560" height="315" src="https://app.heygen.com/embedded-player/5f459d90b151469da9c27830f96f4631" title="HeyGen video player" frameborder="0" allow="encrypted-media; fullscreen;" allowfullscreen></iframe>
-      </div>
+      <p class="muted">(Chatbot optimised for Korea travel)</p>
     </div>
   </div>
 
@@ -389,62 +268,5 @@
   </div>
 
 </div>
-
-<!-- =========================
-     Chat Modal (hidden first)
-     ========================= -->
-<div class="chatModal" id="chatModal" aria-hidden="true">
-  <div class="chatPanel" role="dialog" aria-modal="true" aria-label="AI Travel Buddy Chat">
-    <button class="chatClose" id="closeChatBtn" type="button">✕</button>
-
-    <!-- Botpress shareable chat iframe -->
-    <iframe
-      class="chatFrame"
-      id="bpChatFrame"
-      title="AI Travel Buddy Chat"
-      loading="lazy"
-      referrerpolicy="no-referrer"
-    ></iframe>
-  </div>
-</div>
-
-<script>
-  // ✅ Use Botpress "shareable" webchat page (v3.5)
-  const SHAREABLE = "https://cdn.botpress.cloud/webchat/v3.5/shareable.html?configUrl=https://files.bpcontent.cloud/2026/01/06/05/20260106051545-8ZP1UCU1.json";
-
-  const modal = document.getElementById("chatModal");
-  const frame = document.getElementById("bpChatFrame");
-  const openBtn = document.getElementById("openChatBtn");
-  const closeBtn = document.getElementById("closeChatBtn");
-
-  function openChat(){
-    // load iframe only when needed (faster page load)
-    if (!frame.src) frame.src = SHAREABLE;
-
-    modal.classList.add("open");
-    modal.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeChat(){
-    modal.classList.remove("open");
-    modal.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
-  }
-
-  openBtn.addEventListener("click", openChat);
-  closeBtn.addEventListener("click", closeChat);
-
-  // click outside panel to close
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) closeChat();
-  });
-
-  // ESC to close
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal.classList.contains("open")) closeChat();
-  });
-</script>
-
 </body>
 </html>
